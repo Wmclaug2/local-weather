@@ -46,7 +46,6 @@ function weatherCheck(temp){
 
 function applyWeather(){
 	var iconUrl = "https://openweathermap.org/img/w/"+icon+".png";
-	console.log(iconUrl);
 	$('.icon').html("<img src="+iconUrl+" alt = 'Weather Icon'></img>");
 	$('.temp').append("<p>"+temp+"&deg;F</p>");
 	$('.humidity').append("<p>"+humidity+"%</p>");
@@ -64,10 +63,8 @@ function getWeather(city){
 			humidity = data.main.humidity;
 			description = data.weather[0].description;
 			icon = data.weather[0].icon;
-			console.log(icon);
 			weatherCheck(temp);
 			applyWeather();
-			
 		}
 	})
 }
@@ -76,6 +73,9 @@ function getLocation(){
 	$.get("https://ipinfo.io", function(response) {
   		locale = response.city+','+response.country;
    		$('#weather-header').text("Local Weather For " + response.city+', '+response.region);
+   		if (locale !== ''){
+   			$('.warning').css('display','none');
+   		}
   		getWeather(locale);
 	}, "jsonp")
 }
