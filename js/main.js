@@ -73,7 +73,7 @@ function getWeather(city){
 }
 
 function getLocation(){
-	$.get("http://ipinfo.io", function(response) {
+	$.get("https://ipinfo.io", function(response) {
   		locale = response.city+','+response.country;
    		$('#weather-header').text("Local Weather For " + response.city+', '+response.region);
   		getWeather(locale);
