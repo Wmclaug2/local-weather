@@ -54,7 +54,7 @@ function applyWeather(){
 }
 
 function getWeather(city){
-	var url = 'https://api.openweathermap.org/data/2.5/weather?q='
+	var url = 'http://api.openweathermap.org/data/2.5/weather?q='
 	city = locale;
 	var appID= '&APPID=1bc98b1be270e7bd6ff7b2cad2497de8';
 	$.ajax({
