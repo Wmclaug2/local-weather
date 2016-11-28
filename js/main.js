@@ -45,7 +45,7 @@ function weatherCheck(temp){
 }
 
 function applyWeather(){
-	var iconUrl = "http://openweathermap.org/img/w/"+icon+".png";
+	var iconUrl = "https://openweathermap.org/img/w/"+icon+".png";
 	console.log(iconUrl);
 	$('.icon').html("<img src="+iconUrl+" alt = 'Weather Icon'></img>");
 	$('.temp').append("<p>"+temp+"&deg;F</p>");
@@ -54,7 +54,7 @@ function applyWeather(){
 }
 
 function getWeather(city){
-	var url = 'http://api.openweathermap.org/data/2.5/weather?q='
+	var url = 'https://api.openweathermap.org/data/2.5/weather?q='
 	city = locale;
 	var appID= '&APPID=1bc98b1be270e7bd6ff7b2cad2497de8';
 	$.ajax({
