@@ -115,22 +115,23 @@ function getWeather(){
 }
 
 function getLocation(){
-	$.get("https://ipinfo.io", function(response) {
-  		locale = response.loc.split(',');
-  		lat = locale[0];
-  		lon = locale[1];
-   		$('#weather-header').text(response.city+', '+response.region);
-   		if (locale !== ''){
-   			$('.warning').css('display','none');
-   		}
-  		getWeather();
-	}, "jsonp")
+	$.ajax({
+		url:"https://ipinfo.io",
+		crossDomain: true,
+		dataType: 'jsonp',
+		success:function(response){
+			locale = response.loc.split(',');
+	  		lat = locale[0];
+	  		lon = locale[1];
+	   		$('#weather-header').text(response.city+', '+response.region);
+	   		getWeather();
+		}
+	})
 }
 
 
 $(document).ready(function(){
 	getLocation();
-	
 	$('.switch').on('click',function(){
 		switchUnit();
 	});
