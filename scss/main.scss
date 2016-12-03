@@ -63,7 +63,8 @@ html{
 				position:fixed;
 				@include mobile{
 					bottom:10px;
-					position:absolute;
+					display:block;
+					position:relative;
 				}
 			}
 		}
