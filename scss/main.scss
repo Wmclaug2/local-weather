@@ -1,3 +1,6 @@
+
+@import '_mixins',
+		'compass/css3';
 html{
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -46,6 +49,9 @@ html{
 			font-size:15px;
 			margin:10px auto;
 			padding:10px;
+			@include mobile{
+				margin-bottom:40px;
+			}
 		}
 		.warning{
 			
@@ -55,6 +61,10 @@ html{
 			a{
 				bottom:10px;
 				position:fixed;
+				@include mobile{
+					bottom:10px;
+					position:absolute;
+				}
 			}
 		}
 	}
