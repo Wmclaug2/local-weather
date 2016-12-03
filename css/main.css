@@ -46,7 +46,7 @@ html body .switch {
 }
 @media only screen and (min-width: 0px) and (max-width: 825px) {
   html body .switch {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 html body .warning {
@@ -66,7 +66,6 @@ html body .darksky a {
 }
 @media only screen and (min-width: 0px) and (max-width: 825px) {
   html body .darksky a {
-    bottom: 10px;
     display: block;
     position: relative;
   }
