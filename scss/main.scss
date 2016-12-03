@@ -58,6 +58,10 @@ html{
 			width:80%;
 		}
 		.darksky{
+			display:block;
+			@include mobile{
+				position:absolute;
+			}
 			a{
 				bottom:10px;
 				position:fixed;
