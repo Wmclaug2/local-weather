@@ -75,9 +75,13 @@ function switchUnit(){
 function weatherCheck(temp){
 	if (temp > 90){
 		$('html').css('background-image',"url('img/hot.jpg')");
+		$('#weather-header').css('color','#DEDEDE');
+		$('.blocks-container').css('color','#DEDEDE');
 	}else if(temp > 40){
 		$('html').css('background-image',"url('img/mild.jpg')");
-	}else if (temp < 40){
+		$('#weather-header').css('color','#DEDEDE');
+		$('.blocks-container').css('color','#DEDEDE');
+	}else if (temp > 40){
 		$('html').css('background-image',"url('img/cold.jpg')");
 	}else{ }
 }
