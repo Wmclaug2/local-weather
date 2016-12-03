@@ -9,12 +9,12 @@ html{
 				text-align:center;
 			}
 		}
-		.icon{
+		.icon-container{
 			display:block;
 			margin:10px auto;
 			text-align:center;
-			img{
-				width:3%;
+			canvas{
+				
 			}
 		}
 		.blocks-container{
@@ -50,6 +50,12 @@ html{
 		.warning{
 			
 			width:80%;
+		}
+		.darksky{
+			a{
+				bottom:10px;
+				position:fixed;
+			}
 		}
 	}
 }

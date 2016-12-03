@@ -9,13 +9,10 @@ html body header h1 {
   font-size: 3.5em;
   text-align: center;
 }
-html body .icon {
+html body .icon-container {
   display: block;
   margin: 10px auto;
   text-align: center;
-}
-html body .icon img {
-  width: 3%;
 }
 html body .blocks-container {
   display: flex;
@@ -46,4 +43,11 @@ html body .switch {
   font-size: 15px;
   margin: 10px auto;
   padding: 10px;
+}
+html body .warning {
+  width: 80%;
+}
+html body .darksky a {
+  bottom: 10px;
+  position: fixed;
 }
