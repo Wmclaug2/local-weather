@@ -129,7 +129,6 @@ function getLocation(){
 	})
 }
 
-
 $(document).ready(function(){
 	getLocation();
 	$('.switch').on('click',function(){
