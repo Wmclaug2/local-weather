@@ -48,7 +48,6 @@ function skycon(){
 	}else{
 		skycons.add('icon1', Skycons.PARTLY-CLOUDY-DAY);
 	}
-
 }
 
 function switchUnit(){
@@ -74,15 +73,17 @@ function switchUnit(){
 
 function weatherCheck(temp){
 	if (temp > 90){
-		$('html').css('background-image',"url('img/hot.jpg')");
+		$('body').css('background-image',"url('img/hot.jpg')");
 		$('#weather-header').css('color','#DEDEDE');
 		$('.blocks-container').css('color','#DEDEDE');
 	}else if(temp > 40){
-		$('html').css('background-image',"url('img/mild.jpg')");
+		$('body').css('background-image',"url('img/mild.jpg')");
 		$('#weather-header').css('color','#DEDEDE');
 		$('.blocks-container').css('color','#DEDEDE');
-	}else if (temp > 40){
-		$('html').css('background-image',"url('img/cold.jpg')");
+	}else if (temp < 40){
+		$('body').css('background-image',"url('img/cold.jpg')");
+		$('#weather-header').css('color','#DEDEDE');
+		$('.blocks-container').css('color','#DEDEDE');
 	}else{ }
 }
 
